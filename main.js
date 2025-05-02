@@ -1,4 +1,4 @@
-/*SNACK 1*/
+/* SNACK 1 */
 
 // Crea una funzione dichiarativa chiamata somma che accetta due numeri e restituisce la loro somma.
 
@@ -15,3 +15,9 @@ const sommaAnonima = function (a, b) {
 // Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.
 
 const somma = (a, b) => a + b;
+
+/* SNACK 2 */
+
+// Definisci una funzione chiamata quadrato che accetta un numero e restituisce il suo quadrato in una sola riga.
+
+const quadrato = n => n * n;
