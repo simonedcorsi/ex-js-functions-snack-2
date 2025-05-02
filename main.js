@@ -93,3 +93,22 @@ setTimeout(() => {
   clearInterval(contatoreId);
   console.log("Contatore fermato.");
 }, 5000);
+
+
+/* SNACK 7 */
+// Scrivi una funzione eseguiEferma che accetta un messaggio, un tempo di avvio e un tempo di stop. Il messaggio deve essere stampato a intervalli regolari, ma si deve fermare dopo il tempo di stop.
+
+function eseguiEferma(messaggio, tempoAvvio, tempoStop) {
+    setTimeout(() => {
+      const id = setInterval(() => {
+        console.log(messaggio);
+      }, 1000); 
+  
+      setTimeout(() => {
+        clearInterval(id);
+        console.log("Messaggio fermato.");
+      }, tempoStop);
+    }, tempoAvvio);
+}
+  
+eseguiEferma("Ciao, sto parlando!", 2000, 5000);
