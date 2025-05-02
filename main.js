@@ -16,8 +16,24 @@ const sommaAnonima = function (a, b) {
 
 const somma = (a, b) => a + b;
 
+
 /* SNACK 2 */
 
 // Definisci una funzione chiamata quadrato che accetta un numero e restituisce il suo quadrato in una sola riga.
 
 const quadrato = n => n * n;
+
+
+/* SNACK 3 */
+
+// Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri e una funzione operatore (callback). La funzione deve eseguire l'operazione fornita sui due numeri.
+
+function operazione(a, b, segno) {
+    return segno(a, b);
+}
+
+const somma = (a, b) => a + b;
+const sottrazione = (a, b) => a - b;
+const moltiplicazione = (a, b) => a * b;
+
+console.log(operazione(5, 3, somma));          
