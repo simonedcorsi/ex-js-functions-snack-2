@@ -74,3 +74,22 @@ setTimeout(() => {
 /* SNACK 6 */
 // Definisci una funzione creaContatoreAutomatico che accetta un intervallo di tempo e restituisce una funzione che avvia un setInterval, incrementando un contatore e stampandolo.
 
+function creaContatoreAutomatico(intervallo) {
+    return function() {
+      let contatore = 0;
+      const id = setInterval(() => {
+        contatore++;
+        console.log(contatore);
+      }, intervallo);
+      
+      return id; 
+    };
+}
+
+const avviaContatore = creaContatoreAutomatico(1000); 
+const contatoreId = avviaContatore();
+
+setTimeout(() => {
+  clearInterval(contatoreId);
+  console.log("Contatore fermato.");
+}, 5000);
